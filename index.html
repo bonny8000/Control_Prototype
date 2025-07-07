@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CR Login System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="title-bar">CR Login System</div>
+
+  <div class="main-wrapper">
+    <div class="list-box">
+      <h3>Available Machines</h3>
+      <select id="available" size="12" ondblclick="startMachine()"></select>
+    </div>
+
+    <div class="button-panel">
+      <button id="start" onclick="startMachine()" disabled>START</button>
+      <button id="stop" onclick="stopMachine()" disabled>STOP</button>
+      <button id="stop-all" onclick="stopAll()" disabled>STOP ALL</button>
+    </div>
+
+    <div class="list-box">
+      <h3>Machines That Are In Use</h3>
+      <select id="inuse" size="12" ondblclick="stopMachine()"></select>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button id="login-btn" onclick="openLoginModal()">LOG IN</button>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal" id="login-modal">
+    <div class="modal-window">
+      <div class="modal-title-bar">
+        <span>Login</span>
+        <button class="close-btn" onclick="closeLoginModal()">✕</button>
+      </div>
+      <div class="modal-content">
+        <label>USER ID:</label><br>
+        <input type="text" id="username"><br><br>
+        <label>PASSWORD:</label><br>
+        <input type="password" id="password"><br><br>
+        <div class="modal-actions">
+          <button onclick="submitLogin()">OK</button>
+          <button onclick="closeLoginModal()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
