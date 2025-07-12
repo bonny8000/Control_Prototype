@@ -35,7 +35,7 @@ function submitLogin() {
   const pass = document.getElementById("password").value;
 
   if (!user.includes("_") || pass !== "Cc832047.") {
-    alert("UserID must include an underscore (_) and Password must be C832047.");
+    alert("UserID must include an underscore (_) and Password must be Cc832047.");
     return;
   }
 
